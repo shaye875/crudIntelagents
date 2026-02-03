@@ -132,6 +132,13 @@
             background-color: white;
             color: black;
         }
+        form button{
+            height: 2rem;
+            background-color: #035344;
+            color: #758089;
+            border: 0;
+            border-radius: 0.3rem;
+        }
     </style>
 </head>
 
@@ -166,33 +173,33 @@
                     <p class="width">Secure field intelligence collection system</p>
                 </div>
             </div>
-            <form action="">
+            <form action="http://localhost:3000/register" method="post">
     
                 <label for="name">
                     <img src="img5.png" alt="">
                     <p class="width">Agent Name</p>
                 </label>
-                <input type="text" name="name" id="name" value="name" placeholder="Enter Agent full name">
+                <input type="text" name="name" id="name" placeholder="Enter Agent full name">
         
                 <label for="code">
                     <img src="img6.png" alt="">
                     <p class="width">Agent Code</p>
                 </label>
-                <input type="text"  value="code" placeholder="Enter secure agent code">
+                <input type="text" name="code" placeholder="Enter secure agent code">
                 <label for="target">
                     <img src="img7.png" alt="">
                     <p class="width">Target</p>
                 </label>
-                <input type="text" id="target" value="target" placeholder="Specify target or subject">
+                <input type="text" name="target" id="target" placeholder="Specify target or subject">
                 <label for="information">
                     <img src="img2.png" alt="">
                     <p class="width">Intelligence information</p>
                 </label>
-                <input type="text" id="information" value="information" placeholder="Provide detailed intelligence information..."><br>
-                <input type="submit" placeholder="submit intelligence Report">
+                <input type="text" name="information" id="information" placeholder="Provide detailed intelligence information..."><br>
+                <button type="submit" id="submit" value="submit">Submit intrlligence Report</button>
             </form>
         </div>
     </main>
 </body>
-
+<script src="script.js"></script>
 </html>

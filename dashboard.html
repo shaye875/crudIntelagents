@@ -80,7 +80,6 @@
         section div div{
             display: flex;
             flex-direction: column;
-            /* background-color: azure; */
             width: 19rem;
             margin-left: 1%;
         }
@@ -140,6 +139,27 @@
             background-color: white;
             color: black;
         }
+        .report{
+            background-color: #90A1B9;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        
+            border: solid;
+            border-radius: 1rem;
+        }
+        .divin{
+
+            display: flex;
+            flex-direction: column;
+
+        }
+        .main1{
+            display: flex;
+            flex-direction: column;
+        
+        }
     </style>
 </head>
 <body>
@@ -174,7 +194,7 @@
         </div>
         <button>standay</button>
     </section>
-    <main>
+    <main id="reports">
         <div>
             <button>+</button>
             <h4 class="width">No Reports Yet</h4>
@@ -182,4 +202,5 @@
         </div>
     </main>
 </body>
+<script src="script.js"></script>
 </html>

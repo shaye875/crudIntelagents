@@ -1,14 +1,16 @@
 const main = document.getElementById("reports")
 
 function readReport(){
-        fetch('./data/report.json')
+        fetch('http://localhost:3000/all')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
+   
+                
                 return response.json();
             })
-            .then((data)=>{
+            .then((data)=>{           
                 if(data.length > 0){
                    
                     main.classList.add("main1")

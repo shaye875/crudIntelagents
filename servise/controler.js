@@ -1,11 +1,13 @@
 import express from 'express'
 import { isInformation } from './validation.js'
 import { isTypes } from './validation.js'
-import { insert,getByName,sortByTarget,sortByTyme } from './queries.js'
+import { insert,getAll,sortByTarget,sortByTyme } from './queries.js'
+import cors from 'cors'
 
 
 const app = express()
 
+app.use(cors())
 
 app.use(express.urlencoded({extended:true}))
 
@@ -22,8 +24,9 @@ app.post("/register",async(req,res)=>{
 })
 
 app.get("/all",async(req,res)=>{
-    const {name} = req.params
-    const data = await getByName(name)
+    const data = await getAll()
+    console.log();
+    
     res.json(data)
 })
 
